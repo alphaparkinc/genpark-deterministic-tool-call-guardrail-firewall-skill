@@ -1,0 +1,41 @@
+{
+  "name": "genpark-deterministic-tool-call-guardrail-firewall-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Deterministic tool-call guardrail firewall enforcing permission schemas and intercepting prompt injection payloads.",
+  "author": "genpark",
+  "category": "ai-safety",
+  "tags": [
+    "nemo-guardrails",
+    "tool-firewall",
+    "prompt-injection-shield",
+    "ai-security",
+    "policy-enforcement"
+  ],
+  "inputs": {
+    "tool_name": {
+      "type": "string"
+    },
+    "arguments_json": {
+      "type": "string"
+    },
+    "permission_level": {
+      "type": "string"
+    }
+  },
+  "outputs": {
+    "guardrail_evaluation_id": {
+      "type": "string"
+    },
+    "injection_risk_score": {
+      "type": "number"
+    },
+    "execution_verdict": {
+      "type": "string"
+    },
+    "security_audit_log_url": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
